@@ -34,15 +34,19 @@ register_sidebar( array(
 ));
 
 //Enqueue_styles
-function Wps_load_styles() {
+function aut_load_styles() {
 
-	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/style.css');
-	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
-	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css');
+	wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Forum|Roboto:300italic,300,700' );
+	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/style.css' );
+	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css' );
+	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css' );
+	wp_register_style( 'authorial', get_template_directory_uri() . '/stylesheets/authorial.css' );
 
+	wp_enqueue_style( 'google-fonts' );
 	wp_enqueue_style( 'skeleton-base' );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-layout' );
+	wp_enqueue_style( 'authorial' );
 
 }
-add_action('wp_enqueue_scripts', 'Wps_load_styles');
+add_action('wp_enqueue_scripts', 'aut_load_styles');

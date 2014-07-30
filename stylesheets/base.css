@@ -57,17 +57,23 @@
 ================================================== */
 	body {
 		background: #fff;
-		font: 16px/1.5em "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
+		font: 16px/1.5em "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #222;
  }
 
 
 /* #Typography
 ================================================== */
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: #181818;
-		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
-		font-weight: normal; }
+		font-family: "Forum", "Georgia", serif;
+		font-weight: normal;
+	}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; }
 	h2 { font-size: 35px; line-height: 40px; }
