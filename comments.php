@@ -1,13 +1,13 @@
 <?php
 /**
  * @package WordPress
- * @subpackage WP-Skeleton
+ * @subpackage Authorial
  */
 ?>
 
 	<div id="comments">
 	 <?php if ( post_password_required() ) : ?>
-		<div class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'WP-Skeleton' ); ?></div>
+		<div class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'Authorial' ); ?></div>
 	</div><!-- .comments -->
 
 	<?php return; endif; ?>

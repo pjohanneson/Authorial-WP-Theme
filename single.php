@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage WP-Skeleton
+ * @subpackage Authorial
  */
 ?>
 <?php get_template_part( 'index', 'single' ); ?> 
