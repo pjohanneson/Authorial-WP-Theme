@@ -50,3 +50,5 @@ function aut_load_styles() {
 
 }
 add_action('wp_enqueue_scripts', 'aut_load_styles');
+
+include_once( 'class-theme-customization.php' );
