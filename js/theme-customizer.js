@@ -34,6 +34,12 @@
 		} );
 	} );
 
+	wp.customize( 'background_image', function( value ) {
+		value.bind( function( newval ) {
+			$('body').css('background-image', newval );
+		} );
+	} );
+
 	//Update site link color in real time...
 	wp.customize( 'link_textcolor', function( value ) {
 		value.bind( function( newval ) {
@@ -41,4 +47,4 @@
 		} );
 	} );
 
-} )( jQuery );	
+} )( jQuery );

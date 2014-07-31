@@ -8,6 +8,8 @@
 register_nav_menu( 'primary', 'Primary Menu' );
 //This theme uses post thumbnails
 add_theme_support( 'post-thumbnails' );
+// and custom backgrounds
+add_theme_support( 'custom-background' );
 //Apply do_shortcode() to widgets so that shortcodes will be executed in widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
