@@ -30,5 +30,36 @@
 /* Body styles */
 
 p {
-	
+	margin-top: 1em;
+}
+
+/* Image styles */
+
+img.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+img.alignright {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+div.wp-caption {
+	text-align: center;
+	border: 1px solid #ddd;
+	padding: 0;
+}
+
+div.wp-caption img {
+	padding: 0;
+}
+p.wp-caption-text {
+	margin:0;
+	color: #444;
+}
+
+.title a h3 {
+	text-decoration: none;
+	color: #456;
 }
