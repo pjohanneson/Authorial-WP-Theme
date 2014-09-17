@@ -63,3 +63,11 @@ p.wp-caption-text {
 	text-decoration: none;
 	color: #456;
 }
+
+h1 + p:first-line, h2 + p:first-line {
+	font-size: 1.3em;
+}
+
+h1 + p {
+	background: #00f;
+}

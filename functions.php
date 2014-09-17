@@ -54,3 +54,12 @@ function aut_load_styles() {
 add_action('wp_enqueue_scripts', 'aut_load_styles');
 
 include_once( 'class-theme-customization.php' );
+
+add_action( 'wp_head', 'pj_show_template' );
+function pj_show_template() {
+    if( current_user_can( 'update_core' ) ) {
+        global $template;
+        echo( "<p>$template</p>" . PHP_EOL );
+    }
+}
+

@@ -13,7 +13,10 @@
                         
         <article id="post-<?php the_ID(); ?>">
           <div class="title">            
-             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title('<h3>', '</h3>'); ?></a>  <!--Post titles-->
+             
+             <?php
+                the_title( '<h1><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'echo' => false, ) ) . '">', '</a></h1>' );
+             ?>
           </div>
              
             <?php the_content("Continue reading " . the_title('', '', false)); ?> <!--The Content-->
