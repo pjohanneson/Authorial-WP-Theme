@@ -58,6 +58,14 @@ p.wp-caption-text {
 	color: #444;
 }
 
+.title h1 a {
+	text-decoration: none;
+}
+
+.title h1 a:hover {
+	text-decoration: underline;
+}
+
 .title a h3 {
 	text-decoration: none;
 	color: #456;
