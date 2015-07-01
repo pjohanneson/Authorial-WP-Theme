@@ -1,21 +1,26 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Authorial
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package Authorial
  */
+
 ?>
-  <div class="clear"></div>
-    <div class="footer">
-       <hr />
-        <div class="sixteen columns">
-            <?php if ( is_active_sidebar( 'footer-sidebar' ) ) : ?> <?php dynamic_sidebar( 'footer-sidebar' ); ?>
-            <?php else : ?><p>You need to drag a widget into your sidebar in the WordPress Admin</p>
-	        <?php endif; ?> 
-        </div>
-    </div>
-            
-</div>                                            
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'authorial' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'authorial' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'authorial' ), 'authorial', '<a href="http://patrickjohanneson.com/" rel="designer">Patrick Johanneson</a>' ); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
 <?php wp_footer(); ?>
-   
+
 </body>
 </html>

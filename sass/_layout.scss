@@ -1,0 +1,27 @@
+// Layout
+
+// Header (Masthead)
+
+header#masthead {
+	background: #111;
+
+	div.row {
+		width: 100%;
+		max-width: 960px;
+		margin: auto;
+	}
+	
+	nav#site-navigation {
+		ul#primary-menu {
+			list-style-type: none;
+			li {
+				display: inline;
+			}
+		}
+	}
+
+}
+
+div.right {
+	text-align: right;
+}

@@ -1,65 +1,150 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Authorial
+ * Authorial functions and definitions
+ *
+ * @package Authorial
  */
 
-//Drag and drop menu support
-register_nav_menu( 'primary', 'Primary Menu' );
-//This theme uses post thumbnails
-add_theme_support( 'post-thumbnails' );
-// and custom backgrounds
-add_theme_support( 'custom-background' );
-//Apply do_shortcode() to widgets so that shortcodes will be executed in widgets
-add_filter( 'widget_text', 'do_shortcode' );
+if ( ! function_exists( 'authorial_setup' ) ) :
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function authorial_setup() {
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on Authorial, use a find and replace
+	 * to change 'authorial' to the name of your theme in all the template files
+	 */
+	load_theme_textdomain( 'authorial', get_template_directory() . '/languages' );
 
-//Widget support for a right sidebar
-register_sidebar( array(
-	'name' => 'Right Sidebar',
-	'id' => 'right-sidebar',
-	'description' => 'Widgets in this area will be shown on the right-hand side.',
-	'before_widget' => '<div id="%1$s">',
-	'after_widget'  => '</div>',
-	'before_title' => '<h3>',
-	'after_title' => '</h3>'
-));
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
 
-//Widget support for the footer
-register_sidebar( array(
-	'name' => 'Footer Sidebar',
-	'id' => 'footer-sidebar',
-	'description' => 'Widgets in this area will be shown in the footer.',
-	'before_widget' => '<div id="%1$s">',
-	'after_widget'  => '</div>',
-	'before_title' => '<h3>',
-	'after_title' => '</h3>'
-));
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
 
-//Enqueue_styles
-function aut_load_styles() {
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+	add_theme_support( 'post-thumbnails' );
 
-	wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Forum|Roboto:300italic,300,700' );
-	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/style.css' );
-	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css' );
-	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css' );
-	wp_register_style( 'authorial', get_template_directory_uri() . '/stylesheets/authorial.css' );
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => esc_html__( 'Primary Menu', 'authorial' ),
+	) );
 
-	wp_enqueue_style( 'google-fonts' );
-	wp_enqueue_style( 'skeleton-base' );
-	wp_enqueue_style( 'skeleton-style' );
-	wp_enqueue_style( 'skeleton-layout' );
-	wp_enqueue_style( 'authorial' );
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
+	/*
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+	) );
+
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'authorial_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 }
-add_action('wp_enqueue_scripts', 'aut_load_styles');
+endif; // authorial_setup
+add_action( 'after_setup_theme', 'authorial_setup' );
 
-include_once( 'class-theme-customization.php' );
-
-add_action( 'wp_head', 'pj_show_template' );
-function pj_show_template() {
-    if( current_user_can( 'update_core' ) ) {
-        global $template;
-        echo( "<p>$template</p>" . PHP_EOL );
-    }
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function authorial_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'authorial_content_width', 640 );
 }
+add_action( 'after_setup_theme', 'authorial_content_width', 0 );
 
+/**
+ * Register widget area.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function authorial_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'authorial' ),
+		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+}
+add_action( 'widgets_init', 'authorial_widgets_init' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function authorial_scripts() {
+	wp_enqueue_style( 'authorial-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'authorial-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'authorial-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'authorial_scripts' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';

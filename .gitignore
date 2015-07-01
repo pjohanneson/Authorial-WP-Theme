@@ -1,2 +1,8 @@
-nbproject
-*.bak
+scss/
+*/.sass-cache/
+.sass-cache/
+package.json
+Gruntfile.js
+node_modules/
+*.map
+zzz_*
