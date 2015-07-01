@@ -598,7 +598,7 @@ header#masthead h1 {
     color: #ddd;
     text-decoration: none; }
   header#masthead h1 a:hover {
-    text-shadow: 0px 0px 24px #dd9; }
+    :text-shadow: 0px 0px 24px #dd9; }
 header#masthead p.site-description {
   color: #ddd;
   font-style: italic;

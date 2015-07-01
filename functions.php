@@ -112,6 +112,9 @@ add_action( 'widgets_init', 'authorial_widgets_init' );
  * Enqueue scripts and styles.
  */
 function authorial_scripts() {
+	// google fonts
+  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans' );
+
 	wp_enqueue_style( 'authorial-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'authorial-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
