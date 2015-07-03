@@ -543,6 +543,18 @@ div.right {
 div#content {
   padding-top: 60px; }
 
+div.story-publication-details {
+  margin: 2em;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  color: #444444; }
+
+div.story-reviews {
+  padding: 2em;
+  border-top: 1px solid #222; }
+  div.story-reviews p.review {
+    margin-bottom: 1em; }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;

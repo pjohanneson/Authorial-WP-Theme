@@ -38,3 +38,20 @@ div.right {
 div#content {
 	padding-top: 60px;
 }
+
+div.story-publication-details {
+	margin: 2em;
+	font-family: $serif;
+	font-style: italic;
+	color: ( $text-color + #222 );
+}
+
+div.story-reviews {
+	padding: 2em;
+	border-top: 1px solid $text-color;
+
+	p.review {
+		margin-bottom: 1em;
+	}
+
+}
