@@ -3,7 +3,16 @@
 // Header (Masthead)
 
 header#masthead {
-	background: #111;
+	background: $background-dark;
+	padding-top: 1rem;
+
+	span.icon-pilcrow {
+		font-size: 3em;
+		color: $background-dark;
+		text-shadow: ( $text-color + #221 ) 0 0 8px;
+		float: left;
+		margin: 2rem;
+	}
 
 	div.row {
 		width: 100%;
@@ -24,4 +33,8 @@ header#masthead {
 
 div.right {
 	text-align: right;
+}
+
+div#content {
+	padding-top: 60px;
 }

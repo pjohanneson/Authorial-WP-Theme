@@ -23,15 +23,22 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'authorial' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
+	<span class="icon-pilcrow"></span>
+	<div class="row">
+		<div class="six columns">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+			</div><!-- .site-branding -->
+		</div><!-- .six columns -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'authorial' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="six columns">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'authorial' ); ?></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .six columns -->
+	</div><!-- .row -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="container">

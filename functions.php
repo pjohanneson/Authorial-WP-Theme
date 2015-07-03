@@ -116,6 +116,7 @@ function authorial_scripts() {
   wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans' );
 
 	wp_enqueue_style( 'authorial-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'icomoon-icons', get_stylesheet_directory_uri() . '/icons.css' );
 
 	wp_enqueue_script( 'authorial-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
