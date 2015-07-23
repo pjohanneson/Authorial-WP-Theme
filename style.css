@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /*
+Theme Name: Authorial
+Theme URI: http://patj.ca/wp/themes/authorial
+Author: Patrick Johanneson
+Author URI: http://patrickjohanneson.com/
+License: GPL v2 or higher
+*/
+/*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
 * www.getskeleton.com
@@ -521,13 +528,23 @@ body {
 
 header#masthead {
   background: #111;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  background: #111;
+  min-height: 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  header#masthead h1 a {
+    text-shadow: #111 0 0 0.125rem; }
+  header#masthead h1 a:hover {
+    text-shadow: #aabbcc 0 0 0.5rem; }
   header#masthead span.icon-pilcrow {
-    font-size: 3em;
+    font-size: 2em;
     color: #111;
-    text-shadow: #444433 0 0 8px;
-    float: left;
-    margin: 2rem; }
+    text-shadow: #aabbcc 0 0 0.5rem;
+    float: right;
+    margin: 0.25rem; }
   header#masthead div.row {
     width: 100%;
     max-width: 960px;
@@ -554,6 +571,12 @@ div.story-reviews {
   border-top: 1px solid #222; }
   div.story-reviews p.review {
     margin-bottom: 1em; }
+
+body.admin-bar header#masthead {
+  top: 28px; }
+
+body.admin-bar div#content {
+  padding-top: 7rem; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -787,6 +810,14 @@ ol ul {
 
 li {
   margin-bottom: 1rem; }
+
+#site-navigation {
+  text-align: right; }
+  #site-navigation ul.nav-menu {
+    list-style: none; }
+    #site-navigation ul.nav-menu li {
+      display: inline;
+      margin-left: 1rem; }
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -15,3 +15,14 @@ ol ul {
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
+
+#site-navigation {
+	text-align: right;
+	ul.nav-menu {
+		list-style: none;
+		li {
+			display: inline;
+			margin-left: 1rem;
+		}
+	}
+}

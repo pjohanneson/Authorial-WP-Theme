@@ -1,0 +1,28 @@
+header#masthead {
+  top: auto;
+  bottom: 0;
+  padding-top: 1rem;
+  height: 4rem;
+  position: fixed;
+  z-index: 9999; }
+  header#masthead div.row {
+    width: 100%;
+    max-width: 960px;
+    margin: auto; }
+  header#masthead nav#site-navigation ul#primary-menu {
+    list-style-type: none; }
+    header#masthead nav#site-navigation ul#primary-menu li {
+      display: inline; }
+
+div#content {
+  padding-bottom: 6rem; }
+
+img.hero {
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
+
+body.admin-bar header#masthead {
+  top: auto; }
+
+/*# sourceMappingURL=front-page-style.css.map */

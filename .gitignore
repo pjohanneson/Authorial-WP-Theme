@@ -6,3 +6,4 @@ Gruntfile.js
 node_modules/
 *.map
 zzz_*
+images/*
