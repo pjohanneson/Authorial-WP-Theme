@@ -7,6 +7,7 @@
  * @package Authorial
  */
 
+tha_html_before();
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -19,10 +20,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'authorial' ); ?></a>
 
+	<?php tha_header_before(); ?>
 	<header id="masthead" class="site-header" role="banner">
+	<?php tha_header_top(); ?>
 	<span class="icon-pilcrow"></span>
 	<div class="row">
 		<div class="six columns">
@@ -39,6 +43,10 @@
 			</nav><!-- #site-navigation -->
 		</div><!-- .six columns -->
 	</div><!-- .row -->
+	<?php tha_header_bottom(); ?>
 	</header><!-- #masthead -->
+	<?php tha_header_after(); ?>
 
+	<?php tha_content_before(); ?>
 	<div id="content" class="container">
+	<?php tha_content_top(); ?>

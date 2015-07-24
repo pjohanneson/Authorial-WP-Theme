@@ -5,6 +5,11 @@
  * @package Authorial
  */
 
+/**
+ * Include the Theme Hook Alliance functions
+ */
+require_once( get_template_directory() . '/inc/tha-theme-hooks.php' );
+
 if ( ! function_exists( 'authorial_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
