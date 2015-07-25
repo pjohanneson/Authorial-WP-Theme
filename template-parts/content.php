@@ -18,7 +18,9 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php tha_entry_before(); ?>
 	<div class="entry-content">
+	<?php tha_entry_top(); ?>
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -33,7 +35,9 @@
 				'after'  => '</div>',
 			) );
 		?>
+	<?php tha_entry_bottom(); ?>
 	</div><!-- .entry-content -->
+	<?php tha_entry_after(); ?>
 
 	<footer class="entry-footer">
 		<?php authorial_entry_footer(); ?>

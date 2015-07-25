@@ -44,6 +44,11 @@ function authorial_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	$name = 'authorial_hero';
+	$width = 1920;
+	$height = 1024;
+	$crop = true;
+	add_image_size( $name, $width, $height, $crop );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

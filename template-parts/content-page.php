@@ -12,7 +12,9 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php tha_entry_before(); ?>
 	<div class="entry-content">
+	<?php tha_entry_top(); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -20,7 +22,9 @@
 				'after'  => '</div>',
 			) );
 		?>
+	<?php tha_entry_bottom(); ?>
 	</div><!-- .entry-content -->
+	<?php tha_entry_end(); ?>
 
 	<footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'authorial' ), '<span class="edit-link">', '</span>' ); ?>

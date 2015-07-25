@@ -2,7 +2,7 @@
 /**
  * The template for displaying the front page.
  * 
- * @todo Sections for posts, fiction, about...
+ * @todo Sections for posts, fiction, about... (or should that be in the plugin? Probably)
  *
  * @package Authorial
  */
