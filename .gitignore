@@ -6,7 +6,6 @@ Gruntfile.js
 node_modules/
 *.map
 zzz_*
-images/*
 *.old
 *.bak
 tha.txt
