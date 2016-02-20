@@ -522,7 +522,7 @@ body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
   background: #ffe;
   color: #222; }
 
@@ -562,7 +562,7 @@ div#content {
 
 div.story-publication-details {
   margin: 2em;
-  font-family: "IM Fell English", serif;
+  font-family: "Libre Baskerville", serif;
   font-style: italic;
   color: #444444; }
 
@@ -581,8 +581,8 @@ body.admin-bar div#content {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-family: "IM Fell English", serif;
-  font-weight: normal; }
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400; }
 
 h1 {
   font-size: 4.0rem;
@@ -633,22 +633,28 @@ h6 {
 
   h6 {
     font-size: 1.5rem; } }
+h1.site-title {
+  font-size: 4.0rem;
+  text-align: center; }
+
 p {
   margin-top: 0; }
 
-header#masthead h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-style: italic; }
-  header#masthead h1 a {
+header#masthead {
+  display: none; }
+  header#masthead h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-style: italic; }
+    header#masthead h1 a {
+      color: #ddd;
+      text-decoration: none; }
+    header#masthead h1 a:hover {
+      :text-shadow: 0px 0px 24px #dd9; }
+  header#masthead p.site-description {
     color: #ddd;
-    text-decoration: none; }
-  header#masthead h1 a:hover {
-    :text-shadow: 0px 0px 24px #dd9; }
-header#masthead p.site-description {
-  color: #ddd;
-  font-style: italic;
-  margin-left: 2rem; }
+    font-style: italic;
+    margin-left: 2rem; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

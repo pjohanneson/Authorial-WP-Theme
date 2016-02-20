@@ -123,8 +123,8 @@ add_action( 'widgets_init', 'authorial_widgets_init' );
  */
 function authorial_scripts() {
 	// google fonts
-  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=IM+Fell+English|Lato' );
- 
+  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' );
+ 	
 
 	wp_enqueue_style( 'authorial-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'icomoon-icons', get_stylesheet_directory_uri() . '/icons.css' );
