@@ -50,6 +50,8 @@ function authorial_setup() {
 	$crop = true;
 	add_image_size( $name, $width, $height, $crop );
 
+	add_image_size( 'authorial-header', 1920, 600, $crop );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'authorial' ),
@@ -123,7 +125,9 @@ add_action( 'widgets_init', 'authorial_widgets_init' );
  */
 function authorial_scripts() {
 	// google fonts
-  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' );
+  // wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' );
+  // wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,300i|Sorts+Mill+Goudy' );
+  wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto|Libre+Baskerville' );
  	
 
 	wp_enqueue_style( 'authorial-style', get_stylesheet_uri() );
@@ -167,3 +171,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load content filters.
+ */
+require get_template_directory() . '/inc/content-filters.php';

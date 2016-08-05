@@ -81,3 +81,8 @@ body.admin-bar  header#masthead {
 body.admin-bar div#content {
 	padding-top: ( $header-height + 3rem );
 }
+
+.featured-image img {
+	max-width: 100%;
+	height: auto;
+}

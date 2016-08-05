@@ -518,11 +518,11 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.8em;
+  font-size: 2.0em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #ffe;
   color: #222; }
 
@@ -577,6 +577,10 @@ body.admin-bar header#masthead {
 
 body.admin-bar div#content {
   padding-top: 7rem; }
+
+.featured-image img {
+  max-width: 100%;
+  height: auto; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -638,7 +642,8 @@ h1.site-title {
   text-align: center; }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+  text-align: justify; }
 
 header#masthead {
   display: none; }

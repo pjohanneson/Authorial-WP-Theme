@@ -20,6 +20,17 @@ tha_html_before();
 </head>
 
 <body <?php body_class(); ?>>
+<?php 
+	if( is_singular() || is_front_page() ) {
+		$id = get_the_ID();
+		if( has_post_thumbnail( $id ) ) {
+			echo( "<div class='featured-image-$id featured-image'>" . PHP_EOL );
+			the_post_thumbnail( 'authorial-header' );
+			echo( "</div> <!-- .featured-image-$id .featured-image -->" . PHP_EOL );
+		}
+	}
+
+?>
 <?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'authorial' ); ?></a>
