@@ -664,10 +664,13 @@ header#masthead {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #369; }
 
 a:hover {
-  color: #0FA0CE; }
+  color: #6699cc; }
+
+a:visited {
+  color: #1a334d; }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

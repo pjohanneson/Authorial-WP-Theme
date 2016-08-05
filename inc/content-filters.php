@@ -21,6 +21,9 @@ class Authorial_Content_Filters {
 				'<p><a href="/fiction">More fiction</a>' .
 				'</p>' . 
 				'</div> <!-- .front-page .fiction .six .columns -->' . PHP_EOL;
+				/**
+				 * @todo Add blog posts
+				 */
 			}
 
 			// get About content

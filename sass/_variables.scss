@@ -9,8 +9,9 @@ $text-color: #222;
 $text-color-light: #ddd;
 
 // Link colors
-$link-color: #1EAEDB;
-$link-hover-color: #0FA0CE;
+$link-color: #369;
+$link-hover-color: lighten( $link-color, 20% );
+$link-visited-color: darken( $link-color, 20% );
 
 // font stacks
 $serif: 'Libre Baskerville', serif;
