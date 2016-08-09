@@ -3,7 +3,7 @@
 class Authorial_Content_Filters {
 
 	function __construct() {
-		add_action( 'the_content', array( $this, 'front_page_content' ) );
+		// add_action( 'the_content', array( $this, 'front_page_content' ) );
 	}
 
 	function front_page_content( $content ) {

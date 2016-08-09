@@ -86,3 +86,10 @@ body.admin-bar div#content {
 	max-width: 100%;
 	height: auto;
 }
+
+.sticky {
+	background: darken( $background-light, 15% );
+	padding: 1.25em;
+	border-radius: 1em;
+	margin-bottom: 1.25em;
+}
