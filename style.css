@@ -572,6 +572,17 @@ div.story-reviews {
   div.story-reviews p.review {
     margin-bottom: 1em; }
 
+div.authorial-post-date {
+  background: #efefe4;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  margin-bottom: 1em; }
+
+.sticky div.authorial-post-date {
+  background: none;
+  border-bottom: 1px solid #a2a2a2;
+  border-radius: 0; }
+
 body.admin-bar header#masthead {
   top: 28px; }
 
@@ -587,6 +598,11 @@ body.admin-bar div#content {
   padding: 1.25em;
   border-radius: 1em;
   margin-bottom: 1.25em; }
+
+article {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 1em;
+  margin-bottom: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -670,9 +686,6 @@ header#masthead {
 div.authorial-post-date {
   font-family: "Roboto", sans-serif;
   font-size: 0.8em; }
-  div.authorial-post-date span::before {
-    color: #222;
-    content: "\f508"; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -908,6 +921,10 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
+
+img.size-post-thumbnail {
+  max-width: 100%;
+  height: auto; }
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

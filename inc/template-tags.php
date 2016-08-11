@@ -83,7 +83,7 @@ function authorial_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'authorial' ),
+		esc_html_x( 'posted %s', 'post date', 'authorial' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -107,23 +107,23 @@ function authorial_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'authorial' ) );
 		if ( $categories_list && authorial_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'authorial' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s. ', 'authorial' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'authorial' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'authorial' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s. ', 'authorial' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'authorial' ), esc_html__( '1 Comment', 'authorial' ), esc_html__( '% Comments', 'authorial' ) );
+		comments_popup_link( esc_html__( 'Leave a comment. ', 'authorial' ), esc_html__( 'One lonely comment. ', 'authorial' ), esc_html__( '% comments. ', 'authorial' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'authorial' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit. ', 'authorial' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

@@ -22,11 +22,11 @@
 	<div class="entry-content">
 	<?php tha_entry_top(); ?>
 		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'authorial' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			if( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			}
+			the_excerpt();
+			echo '<p><a href="' . get_permalink() . '">Read more &raquo;</a></p>' . PHP_EOL;
 		?>
 
 		<?php

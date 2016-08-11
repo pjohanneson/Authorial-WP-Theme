@@ -72,6 +72,19 @@ div.story-reviews {
 
 }
 
+div.authorial-post-date {
+	background: desaturate( darken( $background-light, 5% ), 75% );
+	padding: 0.5em;
+	border-radius: 0.25em;
+	margin-bottom: 1em;
+}
+
+.sticky div.authorial-post-date {
+	background: none;
+	border-bottom: 1px solid lighten( $text-color, 50% );
+	border-radius: 0;
+}
+
 // WordPress admin bar dingus
 
 body.admin-bar  header#masthead {
@@ -92,4 +105,10 @@ body.admin-bar div#content {
 	padding: 1.25em;
 	border-radius: 1em;
 	margin-bottom: 1.25em;
+}
+
+article {
+	border-bottom: 1px solid lighten( $text-color, 75% );
+	padding-bottom: 1em;
+	margin-bottom: 1em;
 }
