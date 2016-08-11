@@ -54,3 +54,14 @@ header#masthead {
   }
   display: none;
 }
+
+div.authorial-post-date {
+  font-family: $sans-serif;
+  font-size: 0.8em;
+  span::before {
+    color: $text-color;
+    content: "\f508";
+  }
+
+}
+
