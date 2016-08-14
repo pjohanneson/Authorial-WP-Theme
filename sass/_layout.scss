@@ -6,9 +6,7 @@ header#masthead {
 	background: $background-dark;
 	padding-top: 1rem;
 
-	background: #111;
-	min-height: $header-height;
-	position: fixed;
+	min-height: 2em;
 	top: 0;
 	width: 100%;
 	z-index: 9999;
@@ -22,14 +20,6 @@ header#masthead {
 		}
 	}
 
-	span.icon-pilcrow {
-		font-size: 2em;
-		color: $background-dark;
-		text-shadow: ( $text-color + #89a ) 0 0 0.5rem;
-		float: right;
-		margin: 0.25rem;
-	}
-
 	div.row {
 		width: 100%;
 		max-width: 960px;
@@ -41,6 +31,18 @@ header#masthead {
 			list-style-type: none;
 			li {
 				display: inline;
+				a {
+					color: lighten( $link-color, 40% );
+					text-decoration: none;
+					font-size: 1.5em;
+				}
+				a:hover {
+					color: lighten( $link-color, 20% );
+					text-decoration: underline;
+				}
+				a:visited {
+					color: lighten( $link-color, 25% );
+				}
 			}
 		}
 	}
@@ -111,4 +113,8 @@ article {
 	border-bottom: 1px solid lighten( $text-color, 75% );
 	padding-bottom: 1em;
 	margin-bottom: 1em;
+}
+
+p {
+	text-align: justify;
 }

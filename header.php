@@ -38,7 +38,6 @@ tha_html_before();
 	<?php tha_header_before(); ?>
 	<header id="masthead" class="site-header" role="banner">
 	<?php tha_header_top(); ?>
-	<span class="icon-pilcrow"></span>
 	<div class="row">
 		<div class="six columns">
 			<div class="site-branding">

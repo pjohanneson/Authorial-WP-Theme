@@ -4,6 +4,21 @@ class Authorial_Content_Filters {
 
 	function __construct() {
 		// add_action( 'the_content', array( $this, 'front_page_content' ) );
+		add_filter( 'the_content', array( $this, 'p_first_classes' ) );
+	}
+
+	function p_first_classes( $content ) {
+		if( is_singular() ) {
+			$lines = explode( "\n", $content );
+			$first_line = trim( $lines[0] );
+			if( '<p>' !== substr( $first_line, 0, 3 ) ) {
+				$first_line = '<p>' . $first_line;
+			}
+			$first_line = str_replace( '<p>', '<p class="first">', $first_line );
+			$lines[0] = $first_line;
+			$content = implode( "\n", $lines );
+		}
+		return $content;
 	}
 
 	function front_page_content( $content ) {

@@ -24,7 +24,7 @@
 		?>
 	<?php tha_entry_bottom(); ?>
 	</div><!-- .entry-content -->
-	<?php tha_entry_end(); ?>
+	<?php tha_entry_after(); ?>
 
 	<footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'authorial' ), '<span class="edit-link">', '</span>' ); ?>
