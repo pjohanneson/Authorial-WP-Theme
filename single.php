@@ -7,6 +7,9 @@
 
 get_header(); ?>
 
+<div class="row">
+<div class="eight columns">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -14,7 +17,13 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-			<?php the_post_navigation(); ?>
+			<?php 
+			$args = array(
+				'prev_text' => '&laquo; %title',
+				'next_text' => '%title &raquo;',
+			);
+			the_post_navigation( $args ); 
+			?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -28,5 +37,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+</div> <!-- .eight columns -->
+
+<div class="four columns" -->
 <?php get_sidebar(); ?>
+</div> <!-- .four columns -->
+</div> <!-- .row -->
 <?php get_footer(); ?>

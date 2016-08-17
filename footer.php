@@ -19,7 +19,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'authorial' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'authorial' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'authorial' ), 'authorial', '<a href="http://patrickjohanneson.com/" rel="designer">Patrick Johanneson</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'authorial' ), 'Authorial', '<a href="http://patrickjohanneson.com/" rel="designer">Patrick Johanneson</a>' ); ?>
 		</div><!-- .site-info -->
 	<?php tha_footer_bottom(); ?>
 	</footer><!-- #colophon -->

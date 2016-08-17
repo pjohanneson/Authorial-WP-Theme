@@ -21,5 +21,5 @@ get_header( 'front-page' ); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar( 'front-page' ); ?>
+<?php get_footer( 'front-page' ); ?>
